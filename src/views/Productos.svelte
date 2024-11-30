@@ -1,7 +1,6 @@
 <script>
   import ProductCard from '../components/ProductCard.svelte';
   import ProductModal from '../components/ProductModal.svelte';
-  import { generatePDF, generateExcel } from '../services/reportService';
 
   let searchQuery = '';
   let productos = [
@@ -19,20 +18,11 @@
     );
   };
 
-  const exportProductsPDF = () => {
-    generatePDF(productos, 'Productos');
-  };
-
-  const exportProductsExcel = () => {
-    generateExcel(productos, 'Productos.xlsx');
-  };
 </script>
 
 <div class="container">
   <div class="header">
     <h1>Productos</h1>
-    <button on:click={exportProductsPDF}>Exportar PDF</button>
-    <button on:click={exportProductsExcel}>Exportar Excel</button>
   </div>
   <div class="search-bar">
     <input type="text" bind:value={searchQuery} placeholder="Buscar productos..." on:input={filterProducts} />
