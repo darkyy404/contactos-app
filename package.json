@@ -19,6 +19,10 @@
     "svelte": "^3.55.0"
   },
   "dependencies": {
-    "sirv-cli": "^2.0.0"
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "sirv-cli": "^2.0.0",
+    "svelte-spa-router": "^4.0.1",
+    "xlsx": "^0.18.5"
   }
 }
